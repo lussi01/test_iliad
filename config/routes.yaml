@@ -3,3 +3,24 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+orders_get:
+    path: /order
+    controller: App\Controller\OrderController::getOrders
+    methods: GET
+
+orders_post:
+    path: /order
+    controller: App\Controller\OrderController::createOrder
+    methods: POST
+
+orders_delete:
+    path: /order/{id}
+    controller: App\Controller\OrderController::deleteOrder
+    methods: DELETE
+
+
+orders_update:
+    path: /order/{id}
+    controller: App\Controller\OrderController::updateOrder
+    methods: PUT
